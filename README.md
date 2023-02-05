@@ -5,23 +5,23 @@ A Dear-Imgui backend implement by Bgfx in C#
 # How to use
 I will use VS2022 and OpenGL backend as example...
 
-1. first please get Bgfx and its dependencies:
+- first please get Bgfx and its dependencies:
 https://bkaradzic.github.io/bgfx/build.html
 
-2. build bgfx as a shared lib solution, refers to https://github.com/bkaradzic/bgfx/issues/297:
+- build bgfx as a shared lib solution, refers to https://github.com/bkaradzic/bgfx/issues/297:
 ```
 $ genie --with-shared-lib vs2022
 ```
-3. open your bgfx solution, you will find a new project, please set it as start project and build it.
+- open your bgfx solution, you will find a new project, please set it as start project and build it.
    
-![bgfx-dll-proj](screenshots\bgfx-dll-proj.png "bgfx-dll-proj")
+![bgfx-dll-proj](screenshots/bgfx-dll-proj.png?raw=true  "bgfx-dll-proj")
 
 you will find **bgfx-shared-libDebug.dll**, please copy and paste this dll along with your C#'s executable file.
 and don't forget to include bgfx's C# bindings to your project.
 
-4. In your C# project, add nuget package: ImGui.NET. I use ImGui.NET 1.89.3 for testing.
-5. include this repo's two .cs files to your C# project.
-6. In your render loop, write like this:
+- In your C# project, add nuget package: ImGui.NET. I use ImGui.NET 1.89.3 for testing.
+- include this repo's two .cs files to your C# project.
+- In your render loop, write like this:
    ```C#
     using <YOUR_WINDOW_LIB>;
     using Bgfx;
